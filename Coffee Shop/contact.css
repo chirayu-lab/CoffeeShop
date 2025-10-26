@@ -1,0 +1,130 @@
+/* ---------- Base ---------- */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5e6d3; /* warm coffee-beige */
+  color: #4b2e2e;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Header ---------- */
+header {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #c07b4b; /* rich coffee brown */
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+header h1 {
+  margin: 0 0 10px 0;
+  font-size: 36px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  margin: 0 12px;
+  transition: 0.3s ease;
+}
+
+header nav a:hover {
+  color: #ffe8d6;
+  text-shadow: 0 0 6px #fff2e0;
+}
+
+/* ---------- Sections ---------- */
+section {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 25px;
+  background-color: #fff3e6;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+section h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #8b3e2f; /* accent brown */
+}
+
+section h3 {
+  font-size: 20px;
+  margin: 10px 0 5px 0;
+  color: #b45f06;
+}
+
+section p {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+/* ---------- Form ---------- */
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #c07b4b;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+form button {
+  background-color: #b45f06;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #8b3e2f;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  background-color: #c07b4b;
+  color: white;
+  padding: 12px;
+  margin-top: auto;
+  font-size: 14px;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+}
+
+/* ---------- Responsive ---------- */
+@media(max-width:600px){
+  header h1 {
+    font-size: 28px;
+  }
+
+  section {
+    padding: 20px;
+    margin: 20px 15px;
+  }
+
+  section h2 {
+    font-size: 22px;
+  }
+
+  section p, section h3 {
+    font-size: 16px;
+  }
+
+  form button {
+    width: 100%;
+  }
+}

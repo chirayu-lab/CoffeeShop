@@ -1,0 +1,118 @@
+/* ---------- Base ---------- */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: url("background.jpg") center/cover no-repeat;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Optional overlay for readability */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 0;
+}
+
+/* ---------- Header ---------- */
+header {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 30px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  margin: 20px auto;
+  max-width: 900px;
+  box-shadow: 0 0 30px rgba(0,255,255,0.1);
+}
+
+header h1 {
+  font-size: clamp(28px, 4vw, 42px);
+  color: #00f0ff;
+  text-shadow: 0 0 12px rgba(0,240,255,0.5);
+  margin-bottom: 10px;
+}
+
+/* Navigation Links */
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 15px;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+header nav a:hover {
+  color: #00f0ff;
+  text-shadow: 0 0 8px #00f0ff;
+}
+
+/* ---------- Sections ---------- */
+section {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px 25px;
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(8px);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,240,255,0.1);
+}
+
+section h2 {
+  font-size: clamp(22px, 3vw, 32px);
+  color: #00f0ff;
+  margin-bottom: 15px;
+  text-shadow: 0 0 6px rgba(0,240,255,0.3);
+}
+
+section p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #fff;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  background: rgba(0,0,0,0.25);
+  padding: 12px;
+  font-size: 14px;
+  color: #fff;
+  margin-top: auto;
+  backdrop-filter: blur(5px);
+}
+
+/* ---------- Responsive ---------- */
+@media(max-width:600px){
+  section {
+    padding: 15px 20px;
+  }
+
+  header h1 {
+    font-size: clamp(22px, 6vw, 32px);
+  }
+
+  section h2 {
+    font-size: clamp(18px, 4vw, 26px);
+  }
+
+  section p {
+    font-size: 16px;
+  }
+
+  header nav a {
+    margin: 0 10px;
+    font-size: 14px;
+  }
+}

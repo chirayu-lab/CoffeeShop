@@ -1,0 +1,83 @@
+      body {
+      margin: 0;
+      height: 100vh;
+      background-image: url("background.jpg"); /* your image */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      font-family: Arial, sans-serif;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;  /* centers vertically */
+      align-items: center;      /* centers horizontally */
+    }
+
+    .welcome {
+      text-align: center;
+      font-family: cursive;
+      font-size: 36px;
+      background-color: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(5px);
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+    }
+
+    .discriprion {
+      text-align: center;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 24px;
+      max-width: 600px;
+      background-color: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(5px);
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 50px;
+    }
+
+    header {
+      background-color: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
+      border-radius: 50px;
+      padding: 15px 40px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 40px; /* spacing between items */
+    }
+
+    li a {
+      text-decoration: none;
+      color: white;
+      font-size: 22px;
+      text-transform: uppercase;
+      position: relative;
+      transition: 0.3s ease;
+    }
+
+    /* Futuristic hover line */
+    li a::after {
+      content: "";
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background-color: #00ffff;
+      transition: width 0.3s ease;
+    }
+
+    li a:hover::after {
+      width: 100%;
+    }
+
+    li a:hover {
+      color: #00ffff;
+      text-shadow: 0 0 10px #00ffff;
+    }

@@ -1,0 +1,128 @@
+/* ---------- Base & Background ---------- */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background: url("background2.jpg") center/cover no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Optional overlay for better readability */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 0;
+}
+
+/* ---------- Header ---------- */
+header {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 30px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  margin: 20px auto;
+  max-width: 900px;
+  box-shadow: 0 0 30px rgba(0,255,255,0.1);
+}
+
+header h1 {
+  margin: 0 0 10px 0;
+  font-size: clamp(28px, 4vw, 42px);
+  letter-spacing: 1px;
+  color: #00f0ff;
+  text-shadow: 0 0 12px rgba(0,240,255,0.5);
+}
+
+a.back {
+  text-decoration: none;
+  color: #fff;
+  background: rgba(0,0,0,0.3);
+  padding: 8px 18px;
+  border-radius: 12px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+a.back:hover {
+  background: rgba(0,240,255,0.3);
+  color: #00f0ff;
+  text-shadow: 0 0 8px #00f0ff;
+}
+
+/* ---------- Gallery Grid ---------- */
+.gallery {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Individual photo card */
+.photo {
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0,240,255,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.photo:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 0 25px rgba(0,240,255,0.3);
+}
+
+.photo img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.photo h3 {
+  text-align: center;
+  margin: 10px 0 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #00f0ff;
+  text-shadow: 0 0 6px rgba(0,240,255,0.3);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  background: rgba(0,0,0,0.25);
+  padding: 12px;
+  color: #fff;
+  font-size: 14px;
+  margin-top: auto;
+  backdrop-filter: blur(5px);
+}
+
+/* ---------- Responsive ---------- */
+@media(max-width: 600px){
+  .photo img {
+    height: 180px;
+  }
+
+  header h1 {
+    font-size: clamp(22px, 6vw, 32px);
+  }
+
+  a.back {
+    padding: 6px 14px;
+  }
+}
